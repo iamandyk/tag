@@ -18,18 +18,25 @@ const App = () => {
 
   return (
     <div>
-      {users.map((user, index) => (
-        <div key={index}>
-          <img
-            src={user.picture.large}
-            alt={`${user.name.first} ${user.name.last}'s Avatar`}
-          />
-          <div>
-            <div>{`${user.name.first} ${user.name.last}`}</div>
-            <div>{`${user.location.state}, ${user.location.country}`}</div>
+      <header className="header">
+        <div className="page-title">EXPANDABLE CONTENT</div>
+      </header>
+
+      <div className="content">
+        {users.map((user, index) => (
+          <div className="user-list-item" key={index}>
+            <img
+              className="user-list-item__picture"
+              src={user.picture.large}
+              alt={`${user.name.first} ${user.name.last}'s Profile Pic`}
+            />
+            <div>
+              <div className="user-list-item__name">{`${user.name.first} ${user.name.last}`}</div>
+              <div className="user-list-item__location">{`${user.location.state}, ${user.location.country}`}</div>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
