@@ -1,11 +1,11 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import { Component } from "react";
 import { render } from "react-dom";
 import "./index.scss";
 
 const App = () => {
   const [users, setUsers] = React.useState([]);
-  React.useEffect(() => {
+  useEffect(() => {
     const fetchUsers = async () => {
       const res = await fetch("https://randomuser.me/api/?results=10");
       const json = await res.json();
