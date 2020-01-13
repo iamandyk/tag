@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 import { Component } from "react";
 import { render } from "react-dom";
 import "./index.scss";
-const Hamburger = require("./img/hamburger@2x.png");
+const Hamburger = require("./img/hamburger@2x.svg");
 import UserList from "./components/UserList";
 
 const App = () => {
   const [users, setUsers] = React.useState([]);
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await fetch("https://randomuser.me/api/?results=10");
+      const res = await fetch("https://randomuser.me/api/?results=25");
       const json = await res.json();
 
       setUsers(json.results);
