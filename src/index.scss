@@ -52,6 +52,12 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
+    position: relative;
+    z-index: 999;
+
+    &--isOpen--true {
+      box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    }
 
     &__picture {
       margin-right: 20px;

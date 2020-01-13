@@ -33,7 +33,10 @@ const UserListItem: React.FC<UserListItemProps> = ({ user }) => {
 
   return (
     <div className="user-list-item">
-      <div className="user-list-item__main" onClick={handleClick}>
+      <div
+        className={`user-list-item__main user-list-item__main--isOpen--${isOpen}`}
+        onClick={handleClick}
+      >
         <img
           className="user-list-item__main__picture"
           src={user.picture.large}
