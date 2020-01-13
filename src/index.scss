@@ -20,18 +20,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
 
-  &__nav__hamburger {
-    height: 12px;
-  }
+    &__hamburger {
+      height: 12px;
+    }
 
-  &__nav__title {
-    font-family: Roboto-Medium;
-    font-size: 12px;
-    color: #ffffff;
-    letter-spacing: 1.5px;
-    text-align: center;
+    &__title {
+      font-family: Roboto-Medium;
+      font-size: 12px;
+      color: #ffffff;
+      letter-spacing: 1.5px;
+      text-align: center;
+    }
   }
 }
 
@@ -42,33 +42,81 @@ body {
 }
 
 .user-list-item {
-  padding: 20px;
   margin-bottom: 10px;
-  background: #ffffff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
 
-  &__picture {
-    margin-right: 20px;
-    height: 60px;
-    border-radius: 50%;
+  &__main {
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &__picture {
+      margin-right: 20px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    &__name {
+      font-family: Roboto-Light;
+      font-size: 16px;
+      color: #f77062;
+      margin-bottom: 5px;
+    }
+
+    &__location {
+      font-family: Roboto-Light;
+      font-size: 12px;
+      color: #878787;
+    }
+
+    &__expandable {
+      margin-left: auto;
+    }
   }
 
-  &__name {
-    font-family: Roboto-Light;
-    font-size: 16px;
-    color: #f77062;
-    margin-bottom: 5px;
+  &__expandable-container {
+    margin: 0 10px 10px;
+    min-height: 80px;
+    background-image: linear-gradient(45deg, #f77062 0%, #fe5196 100%);
+
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__item {
+      flex: 50%;
+      text-align: center;
+
+      &__title {
+        font-family: Roboto-Light;
+        font-size: 14px;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      &__text {
+        font-family: Roboto-Light;
+        font-size: 12px;
+        color: #ffffff;
+        text-align: center;
+      }
+    }
+
+    &__divider {
+      min-height: 80px;
+      width: 1px;
+      background: linear-gradient(#000, #000) no-repeat center/2px 100%;
+      opacity: 0.1;
+      flex-grow: 1;
+    }
   }
 
-  &__location {
-    font-family: Roboto-Light;
-    font-size: 12px;
-    color: #878787;
-  }
-
-  &__expandable {
-    margin-left: auto;
+  &__email-link {
+    text-decoration: none;
+    color: #ffffff;
   }
 }

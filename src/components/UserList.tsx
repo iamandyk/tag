@@ -14,16 +14,18 @@ export type User = {
     state: string;
     country: string;
   };
+  phone: string;
+  email: string;
 };
 
 type UserListProps = {
-  users: Array<User>;
+  users: User[];
 };
 
 const UserList: React.FC<UserListProps> = ({ users }) => {
   return (
     <div>
-      {users.map((user, index) => (
+      {users.map((user: User, index) => (
         <UserListItem user={user} key={index} />
       ))}
     </div>
