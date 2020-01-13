@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Component } from "react";
 import { render } from "react-dom";
 import "./index.scss";
+const Hamburger = require("./img/hamburger@2x.png");
 
 const App = () => {
   const [users, setUsers] = React.useState([]);
@@ -19,7 +20,18 @@ const App = () => {
   return (
     <div>
       <header className="header">
-        <div className="page-title">EXPANDABLE CONTENT</div>
+        <div className="header__nav">
+          <div>
+            <img
+              className="header__nav__hamburger"
+              src={Hamburger}
+              alt="menu"
+            />
+          </div>
+
+          <div className="header__nav__title">EXPANDABLE CONTENT</div>
+          <div></div>
+        </div>
       </header>
 
       <div className="content">

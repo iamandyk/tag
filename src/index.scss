@@ -1,27 +1,38 @@
-$font: Helvetica;
-
 body {
   margin: 0;
   padding: 0;
 }
 
 .header {
+  padding: 20px;
   height: 80px;
   background-image: linear-gradient(45deg, #f77062 0%, #fe5196 100%);
-  text-align: center;
+  display: flex;
+  align-items: flex-end;
+
+  &__nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav__hamburger {
+    height: 12px;
+  }
+
+  &__nav__title {
+    font-family: Roboto-Medium;
+    font-size: 12px;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
 }
 
 .content {
   background: #f9fafb;
   padding: 10px 0;
-}
-
-.page-title {
-  font-family: Helvetica;
-  font-size: 12px;
-  color: #ffffff;
-  letter-spacing: 1.5px;
-  text-align: center;
 }
 
 .user-list-item {
@@ -31,23 +42,23 @@ body {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-}
 
-.user-list-item__picture {
-  margin-right: 20px;
-  height: 60px;
-  border-radius: 50%;
-}
+  &__picture {
+    margin-right: 20px;
+    height: 60px;
+    border-radius: 50%;
+  }
 
-.user-list-item__name {
-  font-family: $font;
-  font-size: 16px;
-  color: #f77062;
-  margin-bottom: 5px;
-}
+  &__name {
+    font-family: Roboto-Light;
+    font-size: 16px;
+    color: #f77062;
+    margin-bottom: 5px;
+  }
 
-.user-list-item__location {
-  font-family: $font;
-  font-size: 12px;
-  color: #878787;
+  &__location {
+    font-family: Roboto-Light;
+    font-size: 12px;
+    color: #878787;
+  }
 }
