@@ -1,6 +1,11 @@
+html {
+  min-height: 100vh;
+}
+
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 .header {
@@ -33,6 +38,7 @@ body {
 .content {
   background: #f9fafb;
   padding: 10px 0;
+  min-height: 100vh;
 }
 
 .user-list-item {
