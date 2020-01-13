@@ -47,33 +47,33 @@ const UserListItem: React.FC<UserListItemProps> = ({ user }) => {
         <div className="user-list-item__main__expandable">{icon}</div>
       </div>
 
-      {isOpen ? (
-        <div className="user-list-item__expandable-container">
-          <div className="user-list-item__expandable-container__item">
-            <div className="user-list-item__expandable-container__item__title">
-              Phone
-            </div>
-            <div className="user-list-item__expandable-container__item__text">
-              {user.phone}
-            </div>
+      <div
+        className={`user-list-item__expandable-container user-list-item__expandable-container--isOpen--${isOpen}`}
+      >
+        <div className="user-list-item__expandable-container__item">
+          <div className="user-list-item__expandable-container__item__title">
+            Phone
           </div>
-          <div className="user-list-item__expandable-container__divider"></div>
-          <div className="user-list-item__expandable-container__item">
-            <div className="user-list-item__expandable-container__item__title">
-              Email
-            </div>
-            <div className="user-list-item__expandable-container__item__text">
-              <a
-                target="_blank"
-                href={`mailto:${user.email}`}
-                className="user-list-item__email-link"
-              >
-                {user.email}
-              </a>
-            </div>
+          <div className="user-list-item__expandable-container__item__text">
+            {user.phone}
           </div>
         </div>
-      ) : null}
+        <div className="user-list-item__expandable-container__divider"></div>
+        <div className="user-list-item__expandable-container__item">
+          <div className="user-list-item__expandable-container__item__title">
+            Email
+          </div>
+          <div className="user-list-item__expandable-container__item__text">
+            <a
+              target="_blank"
+              href={`mailto:${user.email}`}
+              className="user-list-item__email-link"
+            >
+              {user.email}
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -79,12 +79,26 @@ body {
 
   &__expandable-container {
     margin: 0 10px 10px;
-    min-height: 80px;
+    height: 0;
     background-image: linear-gradient(45deg, #f77062 0%, #fe5196 100%);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
+
+    &--isOpen {
+      &--true {
+        height: 80px;
+        display: flex;
+        transition: 0.4s;
+      }
+
+      &--false {
+        height: 0;
+        transition: 0.4s;
+      }
+    }
 
     &__item {
       flex: 50%;
@@ -107,7 +121,8 @@ body {
     }
 
     &__divider {
-      min-height: 80px;
+      height: 80px;
+      overflow: hidden;
       width: 1px;
       background: linear-gradient(#000, #000) no-repeat center/2px 100%;
       opacity: 0.1;
