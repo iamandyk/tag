@@ -3,6 +3,7 @@ import { Component } from "react";
 import { render } from "react-dom";
 import "./index.scss";
 const Hamburger = require("./img/hamburger@2x.png");
+import UserList from "./components/UserList";
 
 const App = () => {
   const [users, setUsers] = React.useState([]);
@@ -35,19 +36,7 @@ const App = () => {
       </header>
 
       <div className="content">
-        {users.map((user, index) => (
-          <div className="user-list-item" key={index}>
-            <img
-              className="user-list-item__picture"
-              src={user.picture.large}
-              alt={`${user.name.first} ${user.name.last}'s Profile Pic`}
-            />
-            <div>
-              <div className="user-list-item__name">{`${user.name.first} ${user.name.last}`}</div>
-              <div className="user-list-item__location">{`${user.location.state}, ${user.location.country}`}</div>
-            </div>
-          </div>
-        ))}
+        <UserList users={users} />
       </div>
     </div>
   );
